@@ -12,7 +12,10 @@ void floodFill(vector<string> &text, const pair<int, int> &coord) {
               FILL = '#';
 
   //Pārbauda vai x un y koordināta nav ārpus robežām
-  assert(coord.second < text.size() && coord.second >= 0 && coord.first < text[coord.second].size() &&  coord.first >= 0);
+  if(!(coord.second < text.size() && coord.second >= 0 && coord.first < text[coord.second].size() &&  coord.first >= 0))
+  {
+    throw "Punkts arpus robezam";
+  }
   queue<pair<int, int>> q;
 
   auto [startX, startY] = coord;
