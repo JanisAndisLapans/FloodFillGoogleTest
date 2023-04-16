@@ -1,12 +1,15 @@
 #include <iostream>
 #include "floodfill.h"
 #include "gtest/gtest.h"
+#include "gmock/gmock.h"
 
 using namespace std;
+using namespace testing;
 
 TEST(testFlood, example)
 {
-    EXPECT_EQ(1000, 1000);	
+    vector<int> a = {1,2,3};
+    EXPECT_THAT(a, ElementsAre(1,2,3));	
 }
 
 int main() {
