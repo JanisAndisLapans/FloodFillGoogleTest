@@ -63,7 +63,7 @@ TEST(testFlood, inBounds)
         ));	
 }
 
-TEST(testFlood, fillLeft)
+TEST(testFlood, fillRight)
 {
     vector<string> testVec = {
         "****",
@@ -78,7 +78,7 @@ TEST(testFlood, fillLeft)
         ));	
 }
 
-TEST(testFlood, fillRight)
+TEST(testFlood, fillLeft)
 {
     vector<string> testVec = {
         "****",
