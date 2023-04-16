@@ -6,10 +6,23 @@
 using namespace std;
 using namespace testing;
 
-TEST(testFlood, example)
+TEST(testFlood, onBounds)
 {
-    vector<int> a = {1,2,3};
-    EXPECT_THAT(a, ElementsAre(1,2,3));	
+    vector<string> a = {
+        "*****",
+        "*   *",
+        "*   *",
+        "*   *",
+        "*****"
+        };
+    floodFill(a, make_pair(1,1));
+    EXPECT_THAT(a, ElementsAre(
+        "*****",
+        "*   *",
+        "*   *",
+        "*   *",
+        "*****"
+        ));	
 }
 
 int main() {
